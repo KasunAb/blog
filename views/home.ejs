@@ -1,0 +1,9 @@
+<%-include('partials/header')-%>
+    <h1>Home</h1>
+    <p><%=content%></p>
+    <% console.log(posts.forEach((post)=>{%>
+      <h1><%=post.postTitle%></h1>
+      <p><%=post.postBody.substring(0,100)+"..."%><a href='/posts/<%=post.postTitle%>'> Read more </a></p>
+    <%  console.log(post.postTitle);%>
+    <%})); %>
+<%-include('partials/footer')-%>
